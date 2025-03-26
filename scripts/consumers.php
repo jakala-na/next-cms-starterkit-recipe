@@ -1,5 +1,9 @@
 <?php
 
+/*
+Source/credit: https://github.com/octahedroid/drupal-decoupled-project
+*/
+
 use Drupal\Component\Utility\Crypt;
 use Drupal\Component\Utility\Random;
 use Drupal\Core\File\FileSystemInterface;
