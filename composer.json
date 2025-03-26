@@ -1,0 +1,32 @@
+{
+    "name": "jakala/next-cms-starterkit",
+    "description": "A Drupal recipe to use with the JAKALA Next CMS Starter Kit front end.",
+    "keywords": [
+        "recipe",
+        "drupal recipe",
+        "drupal decoupled",
+        "drupal decoupled recipe",
+        "graphql",
+        "starter kit"
+    ],
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "JAKALA",
+            "homepage": "https://jakala.com",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "drupal/decoupled_preview_iframe": "^1.0",
+        "drupal/gin": "^4.0",
+        "drupal/graphql_compose": "^2.3",
+        "drupal/graphql_compose_fragments": "^1.0",
+        "drupal/graphql_compose_preview": "^1.0",
+        "drupal/paragraphs": "^1.19",
+        "drupal/pathauto": "^1.13",
+        "drupal/simple_oauth": "^5.2",
+        "drupal/visual_editor": "^1.0"
+    }
+}

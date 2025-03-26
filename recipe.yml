@@ -1,0 +1,57 @@
+name: "Next CMS Starter Kit"
+description: "A Drupal recipe to use with the JAKALA Next CMS Starter Kit front end."
+type: "Site"
+
+recipes:
+  # Core
+  - core/recipes/tags_taxonomy
+  - core/recipes/image_media_type
+  - core/recipes/basic_html_format_editor
+  - core/recipes/full_html_format_editor
+  - core/recipes/restricted_html_format
+  - core/recipes/administrator_role
+  - core/recipes/content_editor_role
+  - core/recipes/core_recommended_maintenance
+
+install:
+  # Core
+  - block_content
+  - ckeditor5
+  - config
+  - help
+  - contextual
+  - datetime
+  - editor
+  - field_ui
+  - file
+  - history
+  - image
+  - link
+  - media
+  - media_library
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - path
+  - taxonomy
+  - views
+  - views_ui
+  # Contrib
+  - gin
+  - pathauto
+  - paragraphs
+  - simple_oauth
+  # Decoupled contrib
+  - decoupled_preview_iframe
+  - visual_editor
+  - visual_editor_paragraphs
+  - graphql_compose
+  - graphql_compose_edges
+  - graphql_compose_image_style
+  - graphql_compose_menus
+  - graphql_compose_routes
+  - graphql_compose_users
+  - graphql_compose_views
+  - graphql_compose_preview
+  - graphql_compose_fragments
