@@ -1,0 +1,79 @@
+entity_config:
+  image_style:
+    large:
+      enabled: false
+    media_library:
+      enabled: false
+    medium:
+      enabled: false
+    thumbnail:
+      enabled: false
+  media:
+    image:
+      enabled: true
+      query_load_enabled: true
+      edges_enabled: true
+      routes_enabled: true
+  menu:
+    account:
+      enabled: false
+    admin:
+      enabled: false
+    footer:
+      enabled: true
+      menu_route_enabled: true
+    main:
+      enabled: true
+      menu_route_enabled: true
+    tools:
+      enabled: false
+field_config:
+  media:
+    image:
+      field_media_image:
+        enabled: true
+settings:
+  expose_entity_ids: false
+  schema_description: "Next CMS Starter Kit"
+  schema_version: "1"
+  simple_unions: true
+  site_name: false
+  site_slogan: false
+  site_front: false
+  custom: {}
+  fragments_enabled: true
+node:
+media:
+  image:
+    enabled: true
+    query_load_enabled: true
+    edges_enabled: true
+    routes_enabled: false
+paragraph: {}
+taxonomy_term: {}
+image_style:
+  large:
+    enabled: true
+  media_library:
+    enabled: true
+  medium:
+    enabled: true
+  thumbnail:
+    enabled: true
+menu:
+  admin:
+    enabled: false
+  footer:
+    enabled: false
+  main:
+    enabled: false
+  tools:
+    enabled: false
+  account:
+    enabled: false
+user:
+  user:
+    enabled: true
+    query_load_enabled: true
+    edges_enabled: true
+    routes_enabled: false

@@ -39,9 +39,11 @@ install:
   - views_ui
   # Contrib
   - gin
+  - gin_toolbar
   - pathauto
   - paragraphs
   - simple_oauth
+  - view_unpublished
   # Decoupled contrib
   - decoupled_preview_iframe
   - visual_editor
@@ -55,3 +57,74 @@ install:
   - graphql_compose_views
   - graphql_compose_preview
   - graphql_compose_fragments
+
+config:
+  import:
+    # Core
+    # Contrib
+    gin:
+      - gin.settings
+      - block.block.gin_breadcrumbs
+      - block.block.gin_content
+      - block.block.gin_help
+      - block.block.gin_local_actions
+      - block.block.gin_messages
+      - block.block.gin_page_title
+      - block.block.gin_primary_local_tasks
+    gin_toolbar: "*"
+    # Decoupled contrib
+    graphql_compose: "*"
+
+  actions:
+    # Set and unset Gin blocks.
+    block.block.gin_admin:
+      simpleConfigUpdate:
+        status: false
+    block.block.gin_branding:
+      simpleConfigUpdate:
+        status: false
+    block.block.gin_local_actions:
+      simpleConfigUpdate:
+        region: content
+        weight: -10
+    block.block.gin_local_tasks:
+      simpleConfigUpdate:
+        status: false
+    block.block.gin_page_title:
+      simpleConfigUpdate:
+        region: header
+        weight: -10
+    block.block.gin_primary_local_tasks:
+      simpleConfigUpdate:
+        region: header
+        weight: -5
+        settings.secondary: true
+    block.block.gin_tools:
+      simpleConfigUpdate:
+        status: false
+    # Update the admin theme to Gin in Theme settings.
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    system.theme:
+      simpleConfigUpdate:
+        admin: "gin"
+        default: "gin"
+    # Set permissions for content editor role.
+    user.role.content_editor:
+      createIfNotExists:
+        id: content_editor
+      grantPermissions:
+        - "use text format basic_html"
+        - "use text format full_html"
+    simple_oauth.settings:
+      simpleConfigUpdate:
+        access_token_expiration: 2592000
+        authorization_code_expiration: 2592000
+        refresh_token_expiration: 2592000
+        token_cron_batch_size: 0
+        public_key: ../keys/public.key
+        private_key: ../keys/private.key
+        remember_clients: true
+        use_implicit: false
+        disable_openid_connect: false
