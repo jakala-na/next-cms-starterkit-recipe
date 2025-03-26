@@ -31,7 +31,14 @@ echo "/recipes" >> .gitignore
 ## Require the recipe
 
 ```
-ddev composer require jakala-na/next-cms-starterkit/packages/drupal-recipe
+composer config repositories.next-cms-starterkit-recipe  vcs https://github.com/jakala-na/next-cms-starterkit-recipe
+ddev composer require jakala-na/next-cms-starterkit-recipe
+```
+
+## Apply the recipe
+
+```
+ddev exec -d /var/www/html/web php core/scripts/drupal recipe ../recipes/next-cms-starterkit-recipe
 ```
 
 # What this recipe does:
