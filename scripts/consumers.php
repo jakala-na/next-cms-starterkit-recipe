@@ -47,12 +47,10 @@ if (create_directory($directory)) {
 
 $messages = [
   'Consumers created successfully. Please save the following credentials.',
-  '--- Previewer ---',
-  'DRUPAL_CLIENT_ID=' . $previewerClientId,
-  'DRUPAL_CLIENT_SECRET=' . $previewerClientSecret,
-  '--- Viewer ---',
-  'DRUPAL_CLIENT_ID=' . $viewerClientId,
-  'DRUPAL_CLIENT_SECRET=' . $viewerClientSecret,
+  'DRUPAL_PREVIEWER_CLIENT_ID=' . $previewerClientId,
+  'DRUPAL_PREVIEWER_CLIENT_SECRET=' . $previewerClientSecret,
+  'DRUPAL_VIEWER_CLIENT_ID=' . $viewerClientId,
+  'DRUPAL_VIEWER_CLIENT_SECRET=' . $viewerClientSecret,
 ];
 
 if (PHP_SAPI === 'cli') {

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5faf5806-6bbf-426d-92cb-cdd4f23d57f6
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: vecteezy_alchemist-laboratory-witch-or-wizard-room_20868322.jpg
+  uri:
+    -
+      value: 'public://2025-03/vecteezy_alchemist-laboratory-witch-or-wizard-room_20868322.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 299444
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1743024518

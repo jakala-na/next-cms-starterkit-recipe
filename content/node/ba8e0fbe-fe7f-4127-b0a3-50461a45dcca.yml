@@ -1,0 +1,70 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ba8e0fbe-fe7f-4127-b0a3-50461a45dcca
+  bundle: page
+  default_langcode: en
+  depends:
+    73708a21-15d7-4fd3-97c0-5a20ecb3d589: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Home page'
+  created:
+    -
+      value: 1743024357
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /home
+      langcode: en
+      pathauto: 0
+  field_components:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ccf4f6a8-d757-48ec-8741-dd334e41ca55
+          bundle: hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1743024363
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_description:
+            -
+              value: '<p>The Alchemist’s Vault is a mystical, fantasy-themed store offering <strong>handcrafted products</strong> inspired by ancient alchemy, magical elements, and the secrets of nature. Whether you’re a lover of fantasy worlds, mythical creatures, or simply enjoy unique, enchanting items, this shop brings a touch of magic to everyday life.</p>'
+              format: basic_html
+          field_heading:
+            -
+              value: 'The Alchemist’s Vault'
+          field_image:
+            -
+              entity: 73708a21-15d7-4fd3-97c0-5a20ecb3d589

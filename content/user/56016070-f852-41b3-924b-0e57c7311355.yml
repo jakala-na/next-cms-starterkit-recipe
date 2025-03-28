@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: 56016070-f852-41b3-924b-0e57c7311355
+  default_langcode: en
+  depends:
+    33f12057-a61c-4a5a-8468-59bc92924464: media
+default:
+  preferred_langcode:
+    -
+      value: en
+  name:
+    -
+      value: editor
+  pass:
+    -
+      value: $2y$10$a/D2II7bAWFkI4whrCJZv.9Z4f.p3Ju.RWEtyv2JVi8lGJ3XxWvSK
+      existing: ''
+      pre_hashed: false
+  mail:
+    -
+      value: editor@example.org
+  timezone:
+    -
+      value: America/Los_Angeles
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1722659141
+  access:
+    -
+      value: 1725677958
+  login:
+    -
+      value: 0
+  roles:
+    -
+      target_id: content_editor
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0

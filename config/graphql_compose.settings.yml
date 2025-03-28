@@ -1,13 +1,13 @@
 entity_config:
   image_style:
     large:
-      enabled: false
+      enabled: true
     media_library:
       enabled: false
     medium:
-      enabled: false
+      enabled: true
     thumbnail:
-      enabled: false
+      enabled: true
   media:
     image:
       enabled: true
@@ -27,30 +27,80 @@ entity_config:
       menu_route_enabled: true
     tools:
       enabled: false
+  node:
+    article:
+      enabled: true
+      query_load_enabled: true
+      edges_enabled: true
+      routes_enabled: true
+    page:
+      enabled: true
+      query_load_enabled: true
+      edges_enabled: true
+      routes_enabled: true
+  paragraph:
+    hero:
+      enabled: true
+      query_load_enabled: true
+      edges_enabled: true
+  taxonomy_term:
+    tags:
+      enabled: true
+      query_load_enabled: true
+      edges_enabled: true
+      routes_enabled: true
+  user:
+    user:
+      enabled: true
+      query_load_enabled: true
+      edges_enabled: true
 field_config:
   media:
     image:
       field_media_image:
         enabled: true
+  node:
+    article:
+      body:
+        enabled: true
+    page:
+      field_components:
+        enabled: true
+  paragraph:
+    hero:
+      field_description:
+        enabled: true
+      field_heading:
+        enabled: true
+      field_image:
+        enabled: true
 settings:
+  exclude_unpublished: true
   expose_entity_ids: false
-  schema_description: "Next CMS Starter Kit"
-  schema_version: "1"
+  field_required_override: false
+  schema_description: 'Next CMS Starter Kit'
+  schema_version: '1'
+  simple_queries: true
   simple_unions: true
   site_name: false
   site_slogan: false
-  site_front: false
-  custom: {}
+  site_front: true
+  svg_image: false
+  svg_filesize: 100
+  inflector_langcode: en
+  inflector_singularize: true
+  custom: {  }
+  edge_max_limit: 100
   fragments_enabled: true
-node:
+node: null
 media:
   image:
     enabled: true
     query_load_enabled: true
     edges_enabled: true
     routes_enabled: false
-paragraph: {}
-taxonomy_term: {}
+paragraph: {  }
+taxonomy_term: {  }
 image_style:
   large:
     enabled: true

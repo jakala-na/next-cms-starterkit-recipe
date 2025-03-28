@@ -16,32 +16,28 @@ recipes:
 install:
   # Core
   - block_content
-  - ckeditor5
   - config
-  - help
+  - content_translation
   - contextual
   - datetime
   - editor
   - field_ui
   - file
+  - help
   - history
-  - image
+  - language
   - link
-  - media
-  - media_library
   - menu_link_content
   - menu_ui
   - node
   - options
-  - path
-  - taxonomy
-  - views
   - views_ui
   # Contrib
   - gin
   - gin_toolbar
   - pathauto
   - paragraphs
+  - redirect
   - simple_oauth
   - view_unpublished
   # Decoupled contrib
@@ -61,6 +57,16 @@ install:
 config:
   import:
     # Core
+    block_content: "*"
+    field_ui: "*"
+    file: "*"
+    help: "*"
+    language: "*"
+    menu_ui: "*"
+    node: "*"
+    user:
+      # View to list users.
+      - views.view.user_admin_people
     # Contrib
     gin:
       - gin.settings
@@ -71,11 +77,39 @@ config:
       - block.block.gin_messages
       - block.block.gin_page_title
       - block.block.gin_primary_local_tasks
-    gin_toolbar: "*"
+    pathauto: "*"
+    paragraphs: "*"
+    redirect: "*"
+    simple_oauth: "*"
     # Decoupled contrib
     graphql_compose: "*"
 
   actions:
+    # Set home page
+    system.site:
+      simpleConfigUpdate:
+        page.front: /home
+    # Add the Spanish language
+    language.entity.es:
+      createIfNotExists:
+        langcode: en
+        status: true
+        dependencies: {}
+        id: es
+        label: Spanish
+        direction: ltr
+        weight: 1
+        locked: false
+    language.negotiation:
+      simpleConfigUpdate:
+        url:
+          source: path_prefix
+          prefixes:
+            en: ""
+            es: "es"
+          domains:
+            en: ""
+            es: ""
     # Set and unset Gin blocks.
     block.block.gin_admin:
       simpleConfigUpdate:
@@ -117,14 +151,3 @@ config:
       grantPermissions:
         - "use text format basic_html"
         - "use text format full_html"
-    simple_oauth.settings:
-      simpleConfigUpdate:
-        access_token_expiration: 2592000
-        authorization_code_expiration: 2592000
-        refresh_token_expiration: 2592000
-        token_cron_batch_size: 0
-        public_key: ../keys/public.key
-        private_key: ../keys/private.key
-        remember_clients: true
-        use_implicit: false
-        disable_openid_connect: false
