@@ -27,6 +27,12 @@ default:
       alias: ''
       langcode: en
       pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
   field_media_image:
     -
       entity: 5faf5806-6bbf-426d-92cb-cdd4f23d57f6

@@ -28,14 +28,17 @@ default:
   sticky:
     -
       value: false
-  revision_translation_affected:
-    -
-      value: true
   path:
     -
       alias: /home
       langcode: en
       pathauto: 0
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
   field_components:
     -
       entity:
@@ -55,9 +58,12 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
+          content_translation_source:
             -
-              value: true
+              value: und
+          content_translation_outdated:
+            -
+              value: false
           field_description:
             -
               value: '<p>The Alchemist’s Vault is a mystical, fantasy-themed store offering <strong>handcrafted products</strong> inspired by ancient alchemy, magical elements, and the secrets of nature. Whether you’re a lover of fantasy worlds, mythical creatures, or simply enjoy unique, enchanting items, this shop brings a touch of magic to everyday life.</p>'
@@ -68,3 +74,64 @@ default:
           field_image:
             -
               entity: 73708a21-15d7-4fd3-97c0-5a20ecb3d589
+        translations:
+          es:
+            status:
+              -
+                value: true
+            created:
+              -
+                value: 1743024363
+            revision_translation_affected:
+              -
+                value: true
+            content_translation_source:
+              -
+                value: en
+            content_translation_outdated:
+              -
+                value: false
+            field_description:
+              -
+                value: "<p>The Alchemist's Vault es una tienda mística con temática de fantasía que ofrece productos hechos a mano inspirados en la alquimia antigua, elementos mágicos y los secretos de la naturaleza. Si eres amante de los mundos de fantasía, las criaturas míticas o simplemente disfrutas de artículos únicos y encantadores, esta tienda aporta un toque de magia a la vida cotidiana.</p>"
+                format: basic_html
+            field_heading:
+              -
+                value: 'The Alchemist’s Vault'
+            field_image:
+              -
+                entity: 73708a21-15d7-4fd3-97c0-5a20ecb3d589
+translations:
+  es:
+    status:
+      -
+        value: true
+    uid:
+      -
+        target_id: 1
+    title:
+      -
+        value: 'Pagina de inicio'
+    created:
+      -
+        value: 1743200008
+    promote:
+      -
+        value: true
+    sticky:
+      -
+        value: false
+    revision_translation_affected:
+      -
+        value: true
+    path:
+      -
+        alias: /home
+        langcode: es
+        pathauto: 0
+    content_translation_source:
+      -
+        value: en
+    content_translation_outdated:
+      -
+        value: false
