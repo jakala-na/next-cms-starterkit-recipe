@@ -65,6 +65,19 @@ turbo dev --filter=drupal-marketing
 
 Go to http://localhost:3000/
 
+## Unpacking the recipe and making it part of your installation (optional)
+
+```
+# Install the unpack plugin
+ddev composer config allow-plugins.ewcomposer/unpack true
+ddev composer config repo.recipe-unpack vcs https://github.com/woredeyonas/Drupal-Recipe-Unpack.git
+ddev composer require ewcomposer/unpack:dev-master
+
+# Unpack the recipe and install dependencies
+ddev composer unpack jakala-na/next-cms-starterkit-recipe
+ddev composer install
+```
+
 # What this recipe does:
 
 - Creates content types `page` and `article`
